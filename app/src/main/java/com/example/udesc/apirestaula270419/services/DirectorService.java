@@ -56,6 +56,12 @@ public class DirectorService {
         try {
             JSONObject director = new JSONObject(content.toString());
 
+            d.setId(director.getString("id"));
+            d.setName(director.getString("name"));
+            d.setBirth(director.getString("birth"));
+            d.setCountry(director.getString("country"));
+            //d.setMovies(director.getString("movies"));
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

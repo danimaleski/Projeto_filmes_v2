@@ -33,6 +33,12 @@ public class ListaMoviesActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new PopulateTask().execute();
+    }
+
     class PopulateTask extends AsyncTask<Void, Void, List<Movie>> {
         //1º: DoInbackground recebe
         //2º: Não usamos progress

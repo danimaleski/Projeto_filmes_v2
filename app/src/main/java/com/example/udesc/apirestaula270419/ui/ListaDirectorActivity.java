@@ -1,5 +1,6 @@
 package com.example.udesc.apirestaula270419.ui;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import java.util.List;
 public class ListaDirectorActivity extends AppCompatActivity {
 
     RecyclerView lista;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,9 @@ public class ListaDirectorActivity extends AppCompatActivity {
             DirectorListAdapter adapter = new DirectorListAdapter(new OnDirectorClickListener() {
                 @Override
                 public void onDirectorClick(Director director) {
-                    Log.d("TESTE", director.toString());
+                    Intent i = new Intent(ListaDirectorActivity.this, DetailsDirectorsActivity.class);
+                    i.putExtra("id", director.getId());
+                    startActivity(i);
                 }
             });
 

@@ -20,7 +20,9 @@
         </activity>
         <activity android:name=".ui.ListaMoviesActivity" />
         <activity android:name=".ui.ListaDirectorActivity" />
-        <activity android:name=".ui.DetailsMoviesActivity"></activity>
+        <activity android:name=".ui.DetailsMoviesActivity" />
+        <activity android:name=".ui.IncluiFilmeActivity" />
+        <activity android:name=".ui.DetailsDirectorsActivity"></activity>
     </application>
 
 </manifest>

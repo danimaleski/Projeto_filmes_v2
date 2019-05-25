@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnFilmes;
     Button btnDiretores;
+    Button btnIncluirFilme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnFilmes = findViewById(R.id.btnFilmes);
         btnDiretores = findViewById(R.id.btnDiretores);
+        btnIncluirFilme = findViewById(R.id.btnIncluirFilme);
 
         btnFilmes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ListaDirectorActivity.class);
+                startActivity(i);
+            }
+        });
+
+        btnIncluirFilme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, IncluiFilmeActivity.class);
                 startActivity(i);
             }
         });
